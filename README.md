@@ -29,7 +29,7 @@ Then you can install the *rebus.unicode* package using
 
 ```{r}
 library(devtools)
-install_bitbucket("richierocks/rebus.unicode")
+install_github("richierocks/rebus.unicode")
 ```
 
 ## Package contents
