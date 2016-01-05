@@ -1,4 +1,7 @@
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
+[![Is the package on CRAN?](http://www.r-pkg.org/badges/version/rebus.unicode)](http://www.r-pkg.org/pkg/rebus.unicode)
+[![SemaphoreCI Build Status](https://semaphoreci.com/api/v1/projects/f23fef2e-9aef-4fd4-804d-0744b1d4cc36/636637/badge.svg)](https://semaphoreci.com/richierocks/rebus-unicode)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/yikkxy85jye6cq0f?svg=true)](https://ci.appveyor.com/project/richierocks/rebus-unicode)
 
 # rebus.unicode: Regular Expression Builder, Um, Something (Unicode Functionality)
 
