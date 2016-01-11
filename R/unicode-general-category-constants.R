@@ -4,6 +4,10 @@ NULL
 #' Unicode General Categories
 #' 
 #' Match a Unicode General Category.
+#' @param lo A non-negative integer. Minimum number of repeats, when grouped.
+#' @param hi positive integer. Maximum number of repeats, when grouped.
+#' @param char_class \code{TRUE} or \code{FALSE}. Should the values be wrapped
+#' into a character class?
 #' @return A character vector representing part or all of a regular expression.
 #' @references Table 12 of the Unicode Standard Annex #44 defines the Unicode
 #' General Categories.
@@ -30,6 +34,10 @@ unicode_general_category <- function(x)
 #' Unicode Properties
 #' 
 #' Match a Unicode General Category.
+#' @param lo A non-negative integer. Minimum number of repeats, when grouped.
+#' @param hi positive integer. Maximum number of repeats, when grouped.
+#' @param char_class \code{TRUE} or \code{FALSE}. Should the values be wrapped
+#' into a character class?
 #' @return A character vector representing part or all of a regular expression.
 #' @references Table 12 of the Unicode Standard Annex #44 defines the Unicode
 #' General Categories.
