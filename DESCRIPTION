@@ -26,4 +26,7 @@ Collate:
     'imports.R'
     'unicode-classes.R'
     'unicode-constants.R'
+    'unicode-general-category-classes.R'
+    'unicode-general-category-constants.R'
+    'unicode-operators.R'
 RoxygenNote: 5.0.1
