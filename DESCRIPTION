@@ -13,7 +13,7 @@ Description: Build regular expressions piece by piece using human readable code.
 Depends:
     R (>= 3.1.0)
 Imports:
-    rebus.base
+    rebus.base (>= 0.0-2)
 License: Unlimited
 LazyLoad: yes
 LazyData: yes
