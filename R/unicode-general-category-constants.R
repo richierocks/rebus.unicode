@@ -17,9 +17,23 @@ NULL
 #' \url{http://www.fileformat.info/info/unicode/category/Nd/list.htm}
 #' @seealso \code{\link{unicode_property}}, \code{\link{Unicode}}
 #' @examples 
+#' # Classes
+#' ugc_lowercase_letter()
+#' ugc_decimal_number()
+#' ugc_paragraph_separator()
+#' ugc_currency_symbol()
+#' 
+#' # With repetition
+#' ugc_nonspacing_mark(3, 6)
+#' ugc_separator(1, Inf)
+#' ugc_dash_punctuation(0, Inf)
+#' 
+#' # Without a class wrapper
+#' ugc_titlecase_letter(char_class = FALSE)
+#' 
 #' # Constants
 #' UGC_UPPERCASE_LETTER
-#' UGC_DECIMAL_NUMBER
+#' UGC_LETTER_NUMBER
 #' UGC_MATH_SYMBOL
 #' UGC_FORMAT_CONTROL
 #' @name UnicodeGeneralCategory
@@ -48,6 +62,20 @@ unicode_general_category <- function(x)
 #' @seealso \code{\link{unicode_general_category}}, \code{\link{Unicode}},
 #' \code{\link[stringi]{stringi-search-charclass}}
 #' @examples 
+#' # Classes
+#' up_math()
+#' up_posix_alnum()
+#' up_changes_when_uppercased()
+#' up_diacritic()
+#' 
+#' # With repetition
+#' ugc_nonspacing_mark(3, 6)
+#' up_quotation_mark(1, Inf)
+#' up_posix_xdigit(0, Inf)
+#' 
+#' # Without a class wrapper
+#' up_hyphen(char_class = FALSE)
+#' 
 #' # Constants
 #' UP_ALPHABETIC
 #' UP_DASH
