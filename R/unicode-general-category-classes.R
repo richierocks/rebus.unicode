@@ -265,7 +265,7 @@ ugc_uppercase_letter <- function(lo, hi, char_class = TRUE)
   repeated("\\p{Lu}", lo, hi, char_class = TRUE)
 }
  
-#' @rdname UnicodeGeneralCategory
+#' @rdname UnicodeProperty
 #' @export
 up_alphabetic <- function(lo, hi, char_class = TRUE)
 {
