@@ -85,9 +85,16 @@ unicode_general_category <- function(x)
 #' @aliases unicode_property
 NULL
 
-unicode_property <- function(x)
+unicode_property <- function(x, syntax = c("unicode", "posix"))
 {
-  rebus.base::regex("[:", x, ":]")
+  syntax <- match.arg(syntax)
+  if(syntax == "unicode")
+  {
+    rebus.base::regex("\\p{", x, "}")
+  } else
+  {
+    rebus.base::regex("[:", x, ":]")
+  }
 }
 
 # Unicode General Categories ----------------------------------------------
@@ -341,23 +348,23 @@ UP_CASE_SENSITIVE <- unicode_property("CASE_SENSITIVE")
 
 #' @rdname UnicodeProperty
 #' @export
-UP_POSIX_ALNUM <- unicode_property("POSIX_ALNUM")
+UP_POSIX_ALNUM <- unicode_property("ALNUM")
 
 #' @rdname UnicodeProperty
 #' @export
-UP_POSIX_BLANK <- unicode_property("POSIX_BLANK")
+UP_POSIX_BLANK <- unicode_property("BLANK")
 
 #' @rdname UnicodeProperty
 #' @export
-UP_POSIX_GRAPH <- unicode_property("POSIX_GRAPH")
+UP_POSIX_GRAPH <- unicode_property("GRAPH")
 
 #' @rdname UnicodeProperty
 #' @export
-UP_POSIX_PRINT <- unicode_property("POSIX_PRINT")
+UP_POSIX_PRINT <- unicode_property("PRINT")
 
 #' @rdname UnicodeProperty
 #' @export
-UP_POSIX_XDIGIT <- unicode_property("POSIX_XDIGIT")
+UP_POSIX_XDIGIT <- unicode_property("XDIGIT")
 
 #' @rdname UnicodeProperty
 #' @export
