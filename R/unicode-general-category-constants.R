@@ -45,7 +45,7 @@ NULL
 #' 
 #' # Usage
 #' library(rebus.base)
-#' x <- enc2utf8("I exchanged $1000 for \u20ac665.41 and £243.13.")
+#' x <- "I exchanged $1000 for \u20ac665.41 and \u00a3243.13."
 #' (rx <- capture(ugc_currency_symbol()) %R% 
 #'   capture(
 #'     ugc_decimal_number(1, Inf) %R%
