@@ -1,8 +1,8 @@
 Package: rebus.unicode
 Type: Package
 Title: Unicode Extensions for the 'rebus' Package
-Version: 0.0-1
-Date: 2015-12-15
+Version: 0.0-2
+Date: 2017-01-02
 Author: Richard Cotton [aut, cre]
 Maintainer: Richard Cotton <richierocks@gmail.com>
 Authors@R: person("Richard", "Cotton", role = c("aut", "cre"), email =
@@ -14,6 +14,8 @@ Depends:
     R (>= 3.1.0)
 Imports:
     rebus.base (>= 0.0-2)
+Suggests:
+    stringi
 License: Unlimited
 LazyLoad: yes
 LazyData: yes
