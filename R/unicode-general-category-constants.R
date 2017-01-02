@@ -36,6 +36,23 @@ NULL
 #' UGC_LETTER_NUMBER
 #' UGC_MATH_SYMBOL
 #' UGC_FORMAT_CONTROL
+#' 
+#' \dontrun{
+#' # All the Unicode general categories.
+#' # Not run, since it generates lots of output
+#' ls("package:rebus.unicode", pattern = "^ugc")
+#' }
+#' 
+#' # Usage
+#' library(rebus.base)
+#' x <- enc2utf8("I exchanged $1000 for \u20ac665.41 and £243.13.")
+#' (rx <- capture(ugc_currency_symbol()) %R% 
+#'   capture(
+#'     ugc_decimal_number(1, Inf) %R%
+#'     optional(group("." %R% ugc_decimal_number(2)))
+#'   )
+#' )
+#' stringi::stri_match_all_regex(x, rx)
 #' @name UnicodeGeneralCategory
 #' @aliases unicode_general_category
 NULL
@@ -47,7 +64,7 @@ unicode_general_category <- function(x)
 
 #' Unicode Properties
 #' 
-#' Match a Unicode General Category.
+#' Match a Unicode Property.
 #' @param lo A non-negative integer. Minimum number of repeats, when grouped.
 #' @param hi positive integer. Maximum number of repeats, when grouped.
 #' @param char_class \code{TRUE} or \code{FALSE}. Should the values be wrapped
@@ -81,6 +98,18 @@ unicode_general_category <- function(x)
 #' UP_DASH
 #' UP_POSIX_ALNUM
 #' UP_CHANGES_WHEN_LOWERCASED
+#' 
+#' \dontrun{
+#' # All the Unicode properties.
+#' # Not run, since it generates lots of output
+#' ls("package:rebus.unicode", pattern = "^up")
+#' }
+#' 
+#' # Usage
+#' # Hello in Samoan, Serbian, Persian, Simplified Chinese
+#' hello <- "t\u101lofa, \u437\u434\u440\u430\u432\u43e, \u633\u644\u627\u645, \u4f60\u597d"
+#' stringi::stri_extract_all_regex(hello, up_alphabetic(1, Inf))
+#' stringi::stri_extract_all_regex(hello, up_case_sensitive(1, Inf))
 #' @name UnicodeProperty
 #' @aliases unicode_property
 NULL

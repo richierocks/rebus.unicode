@@ -3,7 +3,8 @@ NULL
 
 #' Unicode classes
 #' 
-#' Match ranges of unicode characters.
+#' Match ranges of unicode characters. In particular, you can match characters
+#' from a particular language.
 #' @param lo A non-negative integer. Minimum number of repeats, when grouped.
 #' @param hi positive integer. Maximum number of repeats, when grouped.
 #' @param char_class \code{TRUE} or \code{FALSE}. Should the values be wrapped
@@ -35,6 +36,21 @@ NULL
 #' LINEAR_B_IDEOGRAMS
 #' DUPLOYAN
 #' OSMANYA
+#' 
+#' \dontrun{
+#' # All the Unicode characer classes
+#' # Not run, since it generates lots of output
+#' setdiff(
+#'   ls("package:rebus.unicode", pattern = lower()), 
+#'   ls(
+#'     "package:rebus.unicode", 
+#'     pattern = START %R% case_insensitive(or("up", "ugc", "unicode")))
+#' )
+#' }
+#' 
+#' # Usage
+#' pythag <- "\u03b1^2 + \u03b2^2 = \u03b3^2"
+#' stringi::stri_extract_all_regex(pythag, greek_and_coptic())
 NULL
 
 #' @rdname Unicode

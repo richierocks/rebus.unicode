@@ -2,11 +2,11 @@
 #'
 #' Manipulate and combine Unicode Properties.
 #' @param x A character vector containing Unicode General Category or Unicode 
-#' Properties.
+#' Properties. Use the functional forms (\code{ugc_*()}) not the constants.
 #' @param y A character vector containing Unicode General Category or Unicode 
-#' Properties.
+#' Properties. Use the functional forms (\code{ugc_*()}) not the constants.
 #' @param ... Character vectors containing Unicode General Category or Unicode 
-#' Properties.
+#' Properties. Use the functional forms (\code{ugc_*()}) not the constants.
 #' @param char_class \code{TRUE} or \code{FALSE}. Should the values be wrapped
 #' into a character class?
 #' @note Use these with ICU-based regular expression engines (\code{stringi} and
@@ -17,16 +17,21 @@
 #' @examples 
 #' # POSIX [:punct:] is more or less equivalent to the union of
 #' # Unicode punctuation and symbol general categories
-#' unicode_union(UGC_PUNCTUATION, UGC_SYMBOL)
+#' unicode_union(ugc_punctuation(), ugc_symbol())
 #' 
 #' # Everything except "A" to "Z" (including punctuation, control chars etc.)
 #' unicode_inverse("[A-Z]")
 #' 
 #' # Uppercase letters, except "A" to "Z"
-#' unicode_setdiff(UGC_UPPERCASE_LETTER, "[A-Z]")
+#' unicode_setdiff(ugc_uppercase_letter(), "[A-Z]")
 #' 
 #' # "A" to "F" (in upper or lower case)
-#' unicode_intersect(UGC_LETTER, UP_ASCII_HEX_DIGIT)
+#' unicode_intersect(ugc_letter(), up_ascii_hex_digit())
+#' 
+#' # Usage
+#' x <- c(letters, LETTERS)
+#' rx <- unicode_intersect(ugc_letter(), up_ascii_hex_digit())
+#' stringi::stri_extract_first_regex(x, rx)
 NULL
 
 #' @rdname UnicodeOperators
