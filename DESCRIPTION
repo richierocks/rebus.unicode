@@ -1,8 +1,8 @@
 Package: rebus.unicode
 Type: Package
 Title: Unicode Extensions for the 'rebus' Package
-Version: 0.0-2
-Date: 2017-01-02
+Version: 0.0-3
+Date: 2017-01-03
 Author: Richard Cotton [aut, cre]
 Maintainer: Richard Cotton <richierocks@gmail.com>
 Authors@R: person("Richard", "Cotton", role = c("aut", "cre"), email =

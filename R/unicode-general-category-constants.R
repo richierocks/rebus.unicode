@@ -11,7 +11,7 @@ NULL
 #' @return A character vector representing part or all of a regular expression.
 #' @references Table 12 of the Unicode Standard Annex #44 defines the Unicode
 #' General Categories.
-#' \url{http://www.unicode.org/reports/tr44}
+#' \url{http://www.unicode.org/reports/tr44/#Property_Values}
 #' 
 #' You can see which characters are contained in a category by visiting, e.g.,
 #' \url{http://www.fileformat.info/info/unicode/category/Nd/list.htm}
@@ -70,12 +70,13 @@ unicode_general_category <- function(x)
 #' @param char_class \code{TRUE} or \code{FALSE}. Should the values be wrapped
 #' into a character class?
 #' @return A character vector representing part or all of a regular expression.
-#' @references Table 12 of the Unicode Standard Annex #44 defines the Unicode
-#' General Categories.
-#' \url{http://www.unicode.org/reports/tr44/}
+#' @references Table 9 of the Unicode Standard Annex #44 defines the Unicode
+#' Properties.
+#' \url{http://www.unicode.org/reports/tr44/#PropList.txt}
 #' 
-#' You can see which characters are contained in a category by visiting, e.g.,
-#' \url{http://www.fileformat.info/info/unicode/category/Nd/list.htm}
+#' There is some more information on the motivation for properties and examples
+#' of properties of a character in Annex #23.
+#' \url{http://www.unicode.org/reports/tr23}
 #' @seealso \code{\link{unicode_general_category}}, \code{\link{Unicode}},
 #' \code{\link[stringi]{stringi-search-charclass}}
 #' @examples 
