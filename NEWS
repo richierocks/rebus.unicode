@@ -1,0 +1,5 @@
+0.0-2 Added ugc_* fns for Unicode General Categories.
+      Added up_* fns for Unicode Properties.
+      Added unicode_* fns for Unicode set operations. 
+0.0-1 First public version.
+      Content extracted from rebus.
